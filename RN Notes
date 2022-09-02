@@ -1,0 +1,449 @@
+Day 1
+
+JavaScript
+
+1. Functions/Types of Functions
+2. Var let & const
+3. Data Types
+4. Type Casting
+5. JSON Objects
+6. Typeof
+7. Diff between undefined & null
+8. == vs ===
+9.  Arrays
+10. Different ways to iterate over arrays - forEach, map & filter
+11. Array Operations - shift, unShift, push & pop
+12. SetInterval & setTimeOut
+13. Asynchronous Operations
+14. JavaScript Single Threaded model
+15. Promise 
+16. Async/Await
+
+
+ECMA - 
+
+ES5, ES6 , ES7…
+
+
+Declaring / Creating Variables
+
+
+3 keywords to create/declare variables
+
+1. var - Can reassign the values, can redeclare the variable
+2. const - Cannot re assign, cannot redeclare the variable
+3. let - Can reassign the value, cannot redeclare the variable (loops) - is used in block specific access
+
+Hoisting -  All the variable declarations are moved to the top of the scope before executing the code
+
+
+Data Types
+
+1. Number
+2. String
+3. Boolean
+4. Array
+5. Object
+6. Null
+7. Undefined
+8. Command
+
+
+Arrays :
+
+forEach - Same as traditional for loop but don’t need to write boiler plate code
+
+map() - we can apply some operation over each element of the array
+
+Filter - can apply some condition over each element and can return the set/array of the elements that satisfies the given condition
+
+Promise => A Description of task whose output/result is not know at that point of time 
+		- A representation of an asynchronous operation
+
+
+Asynchronous => Success / Failure 
+
+Promise => Resolved / Rejected
+
+fetch(URL)
+.then((value) => {
+// Then represents positive/ promise is resolved
+    console.log(value);
+  })
+  .catch((err) => {
+	// catch represents negative/ promise is rejected.
+    console.error(err);
+  });
+
+
+
+React Native
+
+1. Native - Android, iOS, etc
+2. Hybrid - Can create applications that are compatible with more than on OS 
+        1. Flutter
+        2. Ionic
+        3. PhoneGap/Cordova
+        4. React Native
+
+Android - iOS
+
+Hello App
+
+ <Text> Hello App <Text>
+
+	Other Hybrid => convert the code into web content => loads the application with the help of a web view
+
+	React Native => <Text> Hello App <Text>
+
+	=> App is loaded => Android => <TextView> Hello App </TextView>
+
+	=> App is loaded => iOS => <UILabel> Hello App </UILabel>
+
+
+
+Day 2
+
+
+Java latest version
+Android Studio
+
+
+Download iInstall
+
+Node - https://nodejs.org/en/download/
+
+After node installed, Open a terminal and run 
+
+npm install react-native
+
+Then run 
+
+sudo gem install cocoapods
+
+Once done,
+
+Create a Workspace folder in finder
+
+Open a new terminal and move to the workspace folder using cd commands
+
+
+To Create a new RN project
+
+npx react-native init <ProjectName> 
+
+
+To install react native run the following command in Command Prompt/ terminal
+
+
+npm install react-native 
+
+npm i react-native
+
+
+To Create a new RN project
+
+npx react-native init <ProjectName> 
+
+npx react-native run-ios  
+
+npx react-native run-android  --no-jetifier
+
+
+Windows Machine Users to Set up Android
+
+
+
+Day 3
+
+Hot Reloading -> Reloading only the modified content / file
+
+Live Reloading -> Run the application / Reloading the application through the run command
+
+User Interface in RN
+
+Basic Building blocks of RN UI
+
+Text - To print/ render labels / Strings - TextWrap
+
+Button - to trigger an action
+
+TouchableOpacity - Opacity changes when button is clicked
+TouchableHighlight - highlights the component when clicked
+TouchableWithoutFeedback - No changes will be exhibited when clicked
+
+TextInput - Textbook in RN to take input from the user
+
+Image - To render icons/images
+
+View - it is container which defines the arrangement of the elements/components on the screen
+
+
+——— Basic Building blocks ——— 
+
+
+Alert - In built Popups = Predefined components whose look and feel can be modified
+
+Modal - Popups - Can be customised
+
+ScrollView - used to scroll through the content in vertical and horizontal manner
+	- Loads all the elements/content at the time rendering
+
+FlatList - Display list of items - renders/loads only the set of elements which are shown on the screen which is called lazy loading.
+
+SectionList - Displays separate lists of items with headers (section name/title)
+
+Pressable - Alternative for button
+
+
+The content (variables declared inside the component) of any React component can be of two types
+
+1. Normal content - The variables and objects that are created as we do in javascript functions. Whenever there is a change in this type of content, the component will not reload and always have the old values of these variable and objects.
+2. State content - The variables and objects that are part of the component state. Whenever there is a change in this type of content, the component will reload and always have the latest values of these variable and objects.
+
+
+Functional Vs Class Components
+
+ErrorBoundary - can only be used in Class Components
+
+
+Day 4
+ export - if export is used to export a function/variable/class, it is called named export and we can export any number of components with just export statement.
+
+While importing the names of the components are to be same as with which they are created/exported and should be enclosed within { }
+
+export default - when ‘export default’ is used to export it is normal import and only one component can be exported from a file by using ‘export default’.
+
+While importing the names of the components don’t need to be same as with which they are created/exported and should not be enclosed within { }
+
+There are some features which are specific to Class components
+
+	1) State
+	2) Component Life Cycle
+	3) Redux
+
+In order make these class component features available in functional components, the concept of Hooks is introduced
+
+	1) State : useState
+	2) Component Life Cycle - useEffect
+	3) Redux - useDispatch & useSelector
+
+
+Day 5
+
+Navigation - different types are there - Stack, Tab, Drawer
+
+Install the following libraries
+
+npm install react-native-screens react-native-safe-area-context 
+
+npm  i @react-navigation/native
+
+
+Stack Navigation - npm i @react-navigation/native-stack
+
+
+Day 6 
+
+
+TAB Navigation
+
+npm install react-native-screens react-native-safe-area-context 
+
+npm  i @react-navigation/native
+
+
+npm install @react-navigation/bottom-tabs
+
+
+Drawer Navigation
+
+npm install react-native-screens react-native-safe-area-context 
+
+npm  i @react-navigation/native
+
+
+npm install @react-navigation/drawer
+
+npm I  react-native-gesture-handler react-native-reanimated.
+
+
+
+Redux - This is a concept of Application State / Global State - Common place where every component of the application
+Can read or write data to it.
+
+Store : (Application State) - This is the place where the data is stored - Plain JSON Object Representation
+
+Reducer - It is a function that have direct access to the store to make modifications to the store data
+
+Action - The change that has to be performed on the Store. It is a plain JSON Object that contains the ACTION Name (type) & input data (payload)
+
+User will trigger/dispatch an action through the UI =>
+
+
+useDispatch - to dispatch actions to the reducers
+useSelector - to read the data from redux state/ redux store/ global state
+
+
+Redux Libraries : redux and react-redux
+
+Day 7
+
+Redux in Class Component -
+
+	mapStateToProps - Which is going to be used to read data from redux
+
+	mapDispatchToProps - Which is used to dispatch actions / update redux
+
+	connect - react-redux
+
+Export default connect (mapStateToProps, mapDisptachToProps)(ComponentName)
+
+
+Component Life Cycle:
+
+componentWillMount() - Whenever the component is about to be loaded / to be shown on the screen for the first time, we say Component is going to mount
+
+componentDidMount() - Whenever the component is loaded/shown on the screen for the first time, we say Component is mounted
+
+componentDidUpdate() - Whenever there is a change in the state/props of the component of change in the redux data, we  say Component is updated
+
+componentWillUnmount() - Whenever the current component is about to be removed from the stack (clicking back button) the we say component will be unmounted - Unmounting 
+
+useEffect() - one of the hooks that can be used to make use of life cycle events if not used to manage different states of a component
+
+(…) => spread operator can be used to
+
+1. Used as a parameter to a function (rest operator)
+2. Creating a copy of an object (JSON Object) 
+	- Shallow Copy - When we create a copy of an object just by copying the reference
+	- Deep Copy - is copy that will be created that includes the content/ it will be a new object
+		- By using spread operator
+		- by using assign function in Object
+
+
+
+To Store the data to persistent storage, we can use some libraries like AyncStorage (Deprecated), EncrptedStorage to store the data in the form of key - value pairs
+
+npm i react-native-encrypted-storage  
+
+	Android - SharedPreferences
+	iOS : KeyChain
+
+Day 8 : 
+
+Database Management using RealM - MongoDb
+
+data types in realm 
+
+bool, int, double, Decimal128, string, date, data, objectId
+
+DataTypes of realm => 
+
+- realm - npm i realm
+    - Creating Database
+    - Creating Tables
+    - Insert, update, delete & select  
+
+Fragment : To bind multiple elements as a single entity while returning from a function or condition without adding an extra level in view hierarchy of the component
+
+Debug Menu
+
+iOS - Command + D
+Android - control + M => ctrl + M
+
+Join Tables with Primary key and foreign key -  https://www.mongodb.com/docs/realm/sdk/react-native/fundamentals/relationships-and-embedded-objects/#std-label-react-native-to-one-relationship
+
+
+OS Specific Implementation
+
+Platform -> Platform.os => {‘ios’ , ‘android’};
+
+1. When some part of the screen has to be implemented according to OS
+2. Loading completely two different components/screens one for each OS
+3. Native Bridging => We write native android & iOS code and invoke/call that native code from React Native Code - https://reactnative.dev/docs/native-modules-android
+
+
+Day 9
+
+API/WebService - Calling => fetch, axios => Promise => Asynchronous operations
+
+Promise - it represents an asynchronous operation => Success - Resolved / Failure = rejected
+
+Promise.then((response) => Process Response => Show success message/output to the user)
+	.error((error) => Show Error Message to the user)
+
+fetch - inbuilt component
+
+axios - third library
+
+1. Fetch don’t parse the response automatically, but axios does
+2. Cancel the API call in between / before it is completed is possible with axios but not with fetch
+
+
+API Middleware 
+
+npm install redux-thunk
+
+Custom Fonts
+
+1. Download the font definitions/ttf files : https://www.fontsquirrel.com/fonts/list/popular
+2. Copy the ttf files in to your project
+3. Create assets/fonts in your src and then add all font ttf files in it
+4. Create a file name ‘react-native.config.js’ in the root folder
+5. Copy the following content in the above created file
+
+react-native.config.js
+
+module.exports = {
+    project: {
+        ios: {},
+        android: {}
+    },
+    assets: ['./src/assets/'],
+};	
+
+6. Now run  npx react-native-asset
+
+
+<Text style={{fontFamily: 'Roboto', fontSize: 38}}>Wow Such Title</Text>
+
+
+
+  
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
