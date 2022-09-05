@@ -227,6 +227,10 @@ In order make these class component features available in functional components,
 	1) State : useState
 	2) Component Life Cycle - useEffect
 	3) Redux - useDispatch & useSelector
+	4) useCallback => 
+	5) useMemo
+	6) useEffect vs useCallback vs useMemo
+	
 
 
 Day 5
@@ -345,6 +349,18 @@ DataTypes of realm =>
     - Creating Tables
     - Insert, update, delete & select  
 
+
+Two tables in realm can be related by referencing a column of other table
+
+One to one
+
+One to many
+
+https://www.mongodb.com/docs/realm/sdk/react-native/fundamentals/relationships-and-embedded-objects/
+
+Realm Studio is a tool to visualise data saved in relamdb file
+
+
 Fragment : To bind multiple elements as a single entity while returning from a function or condition without adding an extra level in view hierarchy of the component
 
 Debug Menu
@@ -409,41 +425,126 @@ module.exports = {
 <Text style={{fontFamily: 'Roboto', fontSize: 38}}>Wow Such Title</Text>
 
 
+Day 10
 
-  
+Dropdown - react-native-element-dropdown
+npm i react-native-element-dropdown
+
+https://github.com/hoaphantn7604/react-native-element-dropdown
+
+https://www.sitereq.com/post/3-steps-to-add-react-native-dropdown-list-to-your-project#:~:text=The%20three%20steps%20of%20adding,will%20render%20the%20drop%2Ddown
+
+https://blog.logrocket.com/creating-custom-react-native-dropdown/
 
 
 
+Styled Components
+
+npm i styled-components  
+
+https://www.npmjs.com/package/styled-components
+
+Styled components can be used to create styled version of React native components for
+
+1. View
+2. Text
+3. TouchableOpacity
+4. Image
+5. StyleSheet
+6. ScrollView
+
+———
+
+UnitTesting
+
+A component in RN can be of two types
+
+1 - UI Component - Component that can render/draw something on the screen
+2 - Utility component - Component that does render anything on the screen, but can take some input and should give some result back
+
+Using jest testing framework (in-build testing library) we can test/write unit test scripts only for above two types of components
+We cannot write scripts for the component that has some user inputs (Entering text in the text box, button click, etc) associated with it.
+
+For such events to be tested, we can use @testing-library/react-native
+
+npm i @testing-library/react-native 
+
+1. Normal Util components
+2. UI Component Render test (Snapshot)
+3. Events Testing
+
+A "component snapshot" is a JSX-like string created by a custom React serializer built into Jest. This serializer lets Jest translate React component trees to string that's human-readable.
+
+A Snapshot is created when the component is created (Not when we make changes)
+
+To write test cases related to a Component, if the component name is  MyComponent.js, then it’s related unit test script file has to be named as MyComponent.test.js
+
+Once we are done with writing the test scripts, we have to run <npm test> from the root folder of our project 
+
+Whenever the component is modified, we have to update the snapshot of that component, to update the snapshot run the command <npm test -- -u> from root folder of your project.
+
+For test coverage run the command <npx jest --coverage> from the root folder of your project
+
+https://jestjs.io/
+
+https://callstack.github.io/react-native-testing-library/docs/api-queries
+
+———
+
+Date Picker
+
+npm install react-native-date-picker
 
 
 
+Splash Screen
+
+npm i react-native-splash-screen
+
+Android : 
+
+1. Update MyApplication.java
+
+	replace the following code in the MyApplication.java for getPackages method
+
+	@Override
+	protected List<ReactPackage> getPackages() {
+   	 return Arrays.<ReactPackage>asList(
+            new MainReactPackage(),
+            new SplashScreenReactPackage()  //here
+   	 );
+	}
+
+2. Copy the following code in MainActivity.java
+
+protected void onCreate(Bundle savedInstanceState) {
+        SplashScreen.show(this);  // here
+        super.onCreate(savedInstanceState);
+    }
+
+3. Create a file called launch_screen.xml in app/src/main/res/layout and paste the following content in it
+	<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>
+
+4. In App.js or the first screen of your app, add the following code
 	
+	import SplashScreen from 'react-native-splash-screen'
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	componentDidMount() {
+    	// do stuff while splash screen is shown
+        // After having done stuff (such as async tasks) hide the splash screen
+        SplashScreen.hide();
+    }
+    
+    
