@@ -509,6 +509,7 @@ Android :
 
 	import org.devio.rn.splashscreen.SplashScreenReactPackage;
 	import com.facebook.react.shell.MainReactPackage;
+	import java.util.Arrays;
 
 	replace the following code in the MyApplication.java for getPackages method
 
@@ -525,6 +526,7 @@ Android :
 	Add the below import in MainActivity.java
 
 	import android.os.Bundle;
+	import org.devio.rn.splashscreen.SplashScreen;
 
 protected void onCreate(Bundle savedInstanceState) {
         SplashScreen.show(this);  // here
@@ -579,7 +581,6 @@ Add this ‘[SplashScreen show]’ after the call to [self.window makeKeyAndVis
 
 2. Customize your splash screen via LaunchScreen.storyboard or LaunchScreen.xib
 	
-
 
 
 
