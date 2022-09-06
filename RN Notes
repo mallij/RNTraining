@@ -495,7 +495,7 @@ Date Picker
 
 npm install react-native-date-picker
 
-
+-----
 
 Splash Screen
 
@@ -546,5 +546,29 @@ protected void onCreate(Bundle savedInstanceState) {
         // After having done stuff (such as async tasks) hide the splash screen
         SplashScreen.hide();
     }
+
+
+Configuring SplashScreen in iOS
+
+1. Update AppDelegate.m with the following additions:
+
+	#import "RNSplashScreen.h"
+ 
+	@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // ...other code
+
+    // or
+    //[RNSplashScreen showSplash:@"LaunchScreen" inRootView:rootView];
+[RNSplashScreen show];  // Add this line in didFinishLaunchingOptions
+    return YES;
+}
+
+Add this ‘[SplashScreen show]’ after the call to [self.window makeKeyAndVisible]; in the above method  ‘didFinishLaunchingWithOptions’
+
+2. Customize your splash screen via LaunchScreen.storyboard or LaunchScreen.xib
+
     
     
