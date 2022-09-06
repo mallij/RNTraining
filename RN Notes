@@ -505,6 +505,11 @@ Android :
 
 1. Update MyApplication.java
 
+	Add the following import int the top of MyApplication.java and 
+
+	import org.devio.rn.splashscreen.SplashScreenReactPackage;
+	import com.facebook.react.shell.MainReactPackage;
+
 	replace the following code in the MyApplication.java for getPackages method
 
 	@Override
@@ -516,6 +521,10 @@ Android :
 	}
 
 2. Copy the following code in MainActivity.java
+	
+	Add the below import in MainActivity.java
+
+	import android.os.Bundle;
 
 protected void onCreate(Bundle savedInstanceState) {
         SplashScreen.show(this);  // here
@@ -569,6 +578,10 @@ Configuring SplashScreen in iOS
 Add this ‘[SplashScreen show]’ after the call to [self.window makeKeyAndVisible]; in the above method  ‘didFinishLaunchingWithOptions’
 
 2. Customize your splash screen via LaunchScreen.storyboard or LaunchScreen.xib
+	
+
+
+
 
     
     
