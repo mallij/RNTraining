@@ -563,7 +563,9 @@ Configuring SplashScreen in iOS
 
 1. Update AppDelegate.m with the following additions:
 
-	#import "RNSplashScreen.h"
+	#import "RNSplashScreen.h" // swift
+
+	#import <RNSplashScreen.h> // Objective C
  
 	@implementation AppDelegate
 
@@ -573,7 +575,7 @@ Configuring SplashScreen in iOS
 
     // or
     //[RNSplashScreen showSplash:@"LaunchScreen" inRootView:rootView];
-[RNSplashScreen show];  // Add this line in didFinishLaunchingOptions
+	[RNSplashScreen show];  // Add this line in didFinishLaunchingOptions
     return YES;
 }
 
