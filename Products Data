@@ -1,0 +1,122 @@
+export const data = [
+  {
+    id: 1,
+    name: "Shoes",
+    price: 500,
+    discount: 10,
+    image: "shoes.png",
+    color: 'Blue & Yellow'
+  },
+  {
+    id: 2,
+    name: "Jeans",
+    price: 400,
+    discount: 15,
+    image: "jeans.png",
+    color: 'Blue'
+  },
+  {
+    id: 3,
+    name: "Laptop",
+    price: 40000,
+    discount: 5,
+    image: "laptop.png",
+    color: 'Light Gray'
+  },
+  {
+    id: 4,
+    name: "Smart Phone",
+    price: 15000,
+    discount: 10,
+    image: "smartphone.png",
+    color: 'Blue'
+  },
+  {
+    id: 5,
+    name: "Perfume",
+    price: 300,
+    discount: 20,
+    image: "perfume.png",
+    color: 'Red'
+  },
+  {
+    id: 6,
+    name: "Sanitizer",
+    price: 200,
+    discount: 0,
+    image: "sanitizer.png",
+    color: 'Blue'
+  },
+  {
+    id: 7,
+    name: "Mask",
+    price: 50,
+    discount: 0,
+    image: "mask.png",
+    color: 'Green'
+  },
+  {
+    id: 8,
+    name: "Toy",
+    price: 300,
+    discount: 15,
+    image: "toys.png",
+    color: 'Brown'
+  },
+  {
+    id: 9,
+    name: "Soft Drinks",
+    price: 200,
+    discount: 5,
+    image: "drink.png",
+    color: 'Orange & Green'
+  },
+  {
+    id: 10,
+    name: "Snacks",
+    price: 50,
+    discount: 5,
+    image: "snack.png",
+    color: 'Red'
+  },
+  {
+    id: 11,
+    name: "Headset",
+    price: 800,
+    discount: 15,
+    image: "headset.png",
+    color: 'Blue & Gray'
+  },
+  {
+    id: 12,
+    name: "Face Powder",
+    price: 300,
+    discount: 5,
+    image: "powder.png",
+    color: 'White'
+  },
+  {
+    id: 13,
+    name: "Frock",
+    price: 500,
+    discount: 20,
+    image: "frock.png",
+    color: 'Blue & Pink'
+  },
+  {
+    id: 14,
+    name: "Pillows",
+    price: 600,
+    discount: 5,
+    image: "pillows.png",
+    color: 'Blue & Yellow'
+  },
+  {
+    id: 15,
+    name: "Helmet",
+    price: 2000,
+    discount: 15,
+    image: "helmet.png",
+    color: 'Blue'
+  }
+];
