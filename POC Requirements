@@ -1,0 +1,35 @@
+
+
+
+POC Details
+
+
+Dashboard Options/Content
+
+1. If there are any orders placed already, show the most recent order details
+2. On the Top right corner display a cart icon
+3. If some products are added to the cart, show the number of products (but not the quantity)
+4. On the top, display a message ‘welcome back’
+
+Drawer Content
+
+On the top, display the name
+Options : Orders, products, My Profile, Logout
+
+Orders :
+
+List of of orders using FlatList
+If an order is clicked, show another screen which shows all the information of the order
+
+Products:
+List of of products using FlatList with add (+) product to the cart option & remove (-) product from cart
+If a product is clicked, show another screen which shows all the information of the product
+
+Profile : display the info that is captured at the time registration, possible add edit profile option
+
+Logout : get the user out of the app.
+
+Cart Icon : show the list of products added and a button to checkout and a button to clear cart
+
+
+
