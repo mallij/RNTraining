@@ -31,5 +31,16 @@ Logout : get the user out of the app.
 
 Cart Icon : show the list of products added and a button to checkout and a button to clear cart
 
+Forgot password :
+
+Show text box to input their phone number, once the phone number is verified and is found in our db,
+1) show a screen to enter new password 
+or 
+2) reset the pwd to some default pwd and show that password on the screen
+
+Registration : Name, phone number, email id, and pwd
+
+
+
 
 
