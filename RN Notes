@@ -625,6 +625,9 @@ If a variable is created without using any of the three keywords var, let & cons
 
 ————
 
+** typeof => can be used to know the data type of a variable
+
+
 Regular Programming Languages (C, C++, Java, etc) - Write the Code => Compiled => Success => Execute
 
 JIT - Just in Time Compilation => Compilation will be done at the time of execution
@@ -688,18 +691,54 @@ To iterate through an array, we have several methods
 3. map()
 4. filter() 
 
+for(let i = 0; i < 5; ++i){
+    setTimeout(() => {
+        console.log(i);
+    }, 2000);
+}
+
+// for(var i = 0; i < 5; ++i){
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 2000);
+// }
+
 Symbol => used generate some random unique values
+
+Symbol is a built-in object whose constructor returns a symbol primitive — also called a Symbol value or just a Symbol — that's guaranteed to be unique.
 
 Collections => Map & Set
 
+In Javascript Collections are of two types
+
+1. Index Based Collections => Arrays, Strings, Set
+2. Key Based Collections => Map
+
+Set => is used to represent a list of unique elements
+
+var set = new Set(); 
+
+set.add(element-can be any data type) 
+Set.delete(element) // to delete an element in the set
+
+Even if we try to add an element that is already there in the set, it will simply ignores and keeps the existing copy of that element in the same postion
 
 
+To iterate over a Set we can use forEach();
 
+Map => is used to store data in the form of key value pairs.
 
+Key should be of string type and value can be of any type
 
+var map = new Map()
 
+To add a key value pair to a Map, map.set(key, value); 
+To get all the keys in a map => map.keys (an iterator)
 
-typeof => can be used to know the data type of a variable
+map.keys.next.value => the value that is associate with a particular key
+
+To iterate over a Map we can use forEach();
+
 
 
 
