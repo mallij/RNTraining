@@ -495,7 +495,7 @@ Date Picker
 
 npm install react-native-date-picker
 
------
+
 
 Splash Screen
 
@@ -582,9 +582,172 @@ Configuring SplashScreen in iOS
 Add this ‘[SplashScreen show]’ after the call to [self.window makeKeyAndVisible]; in the above method  ‘didFinishLaunchingWithOptions’
 
 2. Customize your splash screen via LaunchScreen.storyboard or LaunchScreen.xib
+
+Day 11
+———-
+
+Localisation
+
+npm i react-native-localization
+
+languageStrings.getInterfaceLanguage(); // To get the device language
+
+languageStrings.setLanguage(lang code eg: hi, en, fr, the); // to change the language within the app
+
+  
+Day 12
+———-
+
+Assignment Part - 1
+
+Day 13
+
+Var, let, const
+
+Var => A variable type, whose value can be modified any number of times, 
+
+Variables declared using var keyword are Either Global, Function Scope but not of block scope
+
+	- That means if a variable declared inside a function it is not accessible out side of that function
+	- variables declared within a block (ex: if, else blocks) can be accessed from anywhere of the function in 	which the block is written.
+
+const=> A variable type, whose value can not be modified once initialised
+			- const variables to be declared and initialised in a single statement
+			- const variables cannot be accessed until they are assigned a value
+			- const type variables are of block scope
+
+Let => A variable type, whose value can be modified any number of times
+	=> let type variables are of block scope
+
+Temporal dead zone => The Block of code in between the first statement of the program and the statement in which the const variable is declared and initialised, is called the temporal dead zone of that const variable
+
+If a variable is created without using any of the three keywords var, let & const, then that variable becomes a global variable and JS assumes var is used to create that variable and that variable can be accessed from anywhere of the code/scope
+
+————
+
+Regular Programming Languages (C, C++, Java, etc) - Write the Code => Compiled => Success => Execute
+
+JIT - Just in Time Compilation => Compilation will be done at the time of execution
+
+
+Javascript Data Types - 8 data types
+
+- The JS code will be compiled at the time execution
+	- Data types in JS are dynamic => Data type of a particular variable is decided at runtime
+
+=> primitive data types - boolean, number, string, null, undefined, 
+=> Object based data types - object, Array, Symbol => Used to generate unique values
+
+
+- Boolean => true / false = 1/0 => the possible values to a Boolean variable are true/false
+
+- Number => variables of type Number are used to hold numeric values (whole numbers & decimal numbers)
+	- To Convert a number of one type to another (ex: integers to decimal or vice versa), we can use Math object
+		in which we have different methods like ceil, floor, trunk, round, etc
+
+https://www.w3schools.com/js/js_math.asp
+
+- String => set of characters and they should be enclosed within qoutes (single, double and backtick)
+		- String can be primitive types or we can create them as objects
+		- It is advised to use primitive notation for using string
+		- String functions can be used to perform different operations on String variables
+
+
+https://www.w3schools.com/jsref/jsref_obj_string.asp
+	
+=> undefined => if the information like variable data type or value is not known (not even null) - it’s value and 
+		data type is also undefined
+
+=> null => whenever null is assigned as a value to some variable, that variable data type is an object and it has a value of null (nothing)
+
+=> Object => is a set of key value pairs embedded inside a pair of curly braces { } - JSON Object Notation
+
+Example : 
+		var obj = {name: 'Ram', age: 30, address: 'Hyderabad'};
+
+To access properties of an obj we can use 
+
+either obj[‘propertyname’] 
+
+or obj.propertyName
+
+To check if a particular property is there in an object or not we have three ways,
+
+1. Obj.hasOwnProperty(‘propertyName’)
+2. In operator => ‘propertName’ in obj
+3. By comparing the value with undefined => if a property value is undefined, that means that property is not there in that object
+
+https://www.w3schools.com/js/js_objects.asp
+
+Arrays :
+
+To iterate through an array, we have several methods
+
+1. Normal for loop
+2. forEach()
+3. map()
+4. filter() 
+
+Symbol => used generate some random unique values
+
+Collections => Map & Set
+
+
+
+
+
+
+
+
+typeof => can be used to know the data type of a variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
 	
 
 
 
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
