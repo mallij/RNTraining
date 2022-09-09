@@ -741,52 +741,58 @@ To iterate over a Map we can use forEach();
 
 
 
+Day 14
+
+Runtime Permissions => In order to use the features/services of the device/system, we will need to mention
+		all the permission names in configuration file.
+
+Reading Location info = Feature is available in the device/system.
+SMS => Read SMS info => 
+Bluetooth => 
 
 
+Android 5.0 or lower => The Permission were granted bye the system if it is requested by the app (it is mentioned in the configuration - AndroidManifest.xml)
+
+Android 5.0 or lower => The Permission were granted bye the system if it is requested by the app (it is mentioned in the configuration - AndroidManifest.xml)
 
 
+iOS => info.plist is the configuration file 
 
 
+Android 6.0 & above => App has to ask the user to give permission to access a particular feature of the device
+
+	For Example if App want to read the location information, using device location feature, whenever that location feature is to be used in the app for the first time, system will ask the user to allow the app to access the location of your device or not.
 
 
+Features and their respective permissions are divided in to two groups
+
+1. Normal Features/permissions => Permission that will allow the app to access common data/info
+	- Ex : The data that is not sensitive/confidential, Phone Info like model, brand, OS name, etc.
+
+	Ex: Internet, 
+
+1. Dangerous Features/permissions => Permissions that are going to allow the app to read sensitive or personal data from the device
+
+	Ex: Contacts Data, Photos, Call Log, Location, SMS, etc.
+
+Only Dangerous permissions are to be allowed/approved by the user of the app.
+
+	If user doesn’t allow a particular permission, that feature can not be used by the App.
+
+Permissions are handled differently in Android & iOS.
 
 
+There is a direct API/Component available in React native to handle Runtime permissions in Android
+
+	- PermissionsAndroid
+
+https://reactnative.dev/docs/permissionsandroid
 
 
-  
+To read location details from the device install react-native-get-location
 
+npm i react-native-get-location
 
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
