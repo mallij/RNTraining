@@ -793,6 +793,71 @@ To read location details from the device install react-native-get-location
 
 npm i react-native-get-location
 
- 
+
+To Integrate Google Maps => npm i react-native-maps
+
+
+To make use of google maps, we have to generate an API_KEY with the help developer console
+
+Go to https://console.cloud.google.com/ and login with gmail credentials
+
+Create a cloud project => New Project => Give a name to that Project
+
+Once the project is created, 
+
+- Move to the page ‘APIs & Services’ => Enabled Apis & Services using the navigation beside the project name
+- Enable the Billing Services Account
+- Enable the APIs named ‘Maps SDK for Android’ && ‘Maps SDK for iOS’
+- Once the APIs are enabled, go to ‘Credentials’ screen using Menu
+- Click on ‘Create Credentials’ and select API Key
+- Copy the API Key that is created in the above step and paste it in 
+    -  AndroidManifest.xml for Android inside the application tag
+
+		<meta-data 
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyBzrEz9rwuGYzACzsAM1BwuwlsjvfkDdkQ"/>
+
+
+Publishing the App
+
+In Android we have two build formats in which an app can be shared
+
+1. Apk. => Android Application package => For Testing purpose => we can download and install apk file to check/test the app
+2. aab => Android Application Bundle => Format used to publish app in the playstore
+
+APK => Contains all the code/files/images/content that is placed as part of that project
+
+	=> This content may be related to different device specifications
+
+AAB => include the content/files/data that is suitable with the device category in which it is going to be installed
+
+To Publish an app in play store
+
+	=> Developer Account
+
+	=> Signed .aab
+
+	=> Icon
+
+	=> 3,4 screenshots
+
+	=> Policies => Disclaimer
+
+Publish an iOS App
+
+=> Apple Account => to be registered in app.com
+
+=> A Project will be created in developer.app.com
+
+=> Project Owner/admin will add us/our apple account to that project as a developer
+
+=> As a next step, project owner will create certificates that are to be configured to be key chain / Xcode
+
+=> Once the build is generated using Xcode we can upload it to test flight
+
+=> Once The app is found working as expected, the build can be pushed to App Store
+
+
+
 
 
